@@ -7,7 +7,7 @@ function UserResults() {
 
     const { users, loading } = useContext(GithubContext)
     
-    if (users.length === 0) return <h1 className='text-3xl text-gray-500 m-5'>Nenhum usuário encontrado!</h1>
+  //  if (users.length === 0) return <h1 className='text-3xl text-gray-500 m-5'>Nenhum usuário encontrado!</h1>
 
     if (!loading) {
         return (
