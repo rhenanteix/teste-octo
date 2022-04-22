@@ -8,7 +8,6 @@ const github = axios.create({
     headers: { Authorization: `token ${GITHUB_TOKEN}`}
 })
 
-// Get Users from API (search)
 export const searchUsers = async (text) => {
     const params = new URLSearchParams({
         q: text,
@@ -19,15 +18,12 @@ export const searchUsers = async (text) => {
     
 }
 
-// Get user and repos
-
 export const getUserAndRepos = async(login) => {
-    // Params to find TOP 10 repos by stars
     const params = new URLSearchParams({
         q: 'user:' + login,
         sort: 'stars',
         order_by: 'desc',
-        per_page: 10,
+        per_page: 100
     })
 
     const [user, repos] = await Promise.all([

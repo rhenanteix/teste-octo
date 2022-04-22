@@ -21,7 +21,7 @@ function Header({title}) {
 }
 
 Header.defaultProps = {
-    title: 'Teste Cosmosbots.io',
+    title: 'Teste Cosmobots.io',
 }
 
 Header.propTypes = {
